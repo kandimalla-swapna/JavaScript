@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript File</title>
+        <script type="text/JavaScript" src="C:\Users\Lenovo\Documents\HTML\JAVASCRIPT\external.js">
+            
+        </script>
+        <script type="text/JavaScript">
+            document.write("hello all<br>")
+        </script>
+    </head>
+    <body bgcolor="aqua">
+        <!-- ways to write the JavaScript
+                1.head tag
+                2.body tag
+                3.external file -->
+            <center><h2>writing methods</h2></center>
+        <script type="text/JavaScript">
+            document.write("i'm swapna<br>")
+        </script>
+        <!-- We can write content in 3 ways
+                1.document.write
+                2.alert,window.alert(gives an alert pop up msg)
+                3. innerHTML-->
+                <script type="text/JavaScript">
+                    document.write("document.write is used for testing purpose")
+                    alert("this is an alert msg")
+                </script>
+                <p id="demo"></p>
+                <script type="text/JavaScript">
+                    document.getElementById("demo").innerHTML="This is written with innerHTML";
+                </script>
+
+                <!--FUNCTIONS IN JS-->
+                <center><h2>Functions in JS</h2></center>
+                <script>
+                    function hello(){
+                        document.write("This is written using function<br>");
+                    }
+                    hello();
+                </script>
+                    <!--the same hello function is calling using button-->
+                    <input type="button" value="click here" onclick="hello()">
+                <script>
+                    function hello(num){
+                        document.write("This is the function with argguments<br> ");
+                        document.write(num*num);
+                    }
+                    hello(5);
+                </script>
+                <input type="button" value="click" onclick="hello(3)">
+
+                <!--VARIABLES IN JS(LOCAL,GLOBAL)-->
+                <center><h2>Variables in JS</h2></center>
+                <script>
+                    var x=20;
+                    function add(){
+                        var y=30;
+                        document.write("Local variable value: "+y);
+                    }
+                    document.write("<br>Global variable value is: "+x);
+                    add();
+                </script>
+                <!--DATATYPES IN JS
+                    1.NUMBER DATATYPE
+                    2.STRING 
+                    3.BOOLEAN
+                    4.REGULAR EXPRESSION
+                    5.ARRAY-->
+                    <center><h2>Datatypes in JS</h2></center>
+                <script>
+                    var x=10 ;
+                    var y=true;
+                    var z="sopna ";
+                    document.write(x+" "+z);
+                    document.write(y+"  ");
+                    document.write(typeof(z));
+                </script>
+                <center><h2>Arrays in JavaScript</h2></center>
+                <!--ARRAYS IN JS-->
+                <script>
+                    let a=['Auih','Bjhiu'];
+                    console.log(a);
+            
+                </script>
+                <h3>Arrays are used to store more than one
+                    variable of same data type  in single var
+                </h3>
+                <script>
+                    var student=["Triveni","Sopna","Bhavs"];
+                    for(i=0;i<student.length;i++){
+                        document.write(student);
+                    }
+                    document.write("<br>");
+                    for(i=0;i<student.length;i++){
+                        document.write(student[i]+"<br>");
+                    }
+                   //Array using constructor
+                    var stu=new Array();
+                    stu[0]="Triveni";
+                    stu[1]="Sopna";
+                    stu[2]="bhavani";
+                    var i=0;
+                    while(i<stu.length){
+                        document.write(stu[i]+"<br>");
+                        i++;
+                    }
+
+                    var emp=new Array("Abc","Cde","Fgh");
+                    for(i=0;i<emp.length;i++){
+                        document.write(emp[i]+"<br>");
+                    }
+                </script>
+               
+                
+
+        </body>
+</html>
