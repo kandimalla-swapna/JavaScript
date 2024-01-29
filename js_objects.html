@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="powderedblue">
+    <center><h2>Objects in JavaScript</h2></center>
+    <script>
+        var stu={name:"swapna",branch:"cse",rno:53};
+        document.write(stu.name+" "+stu.branch+" "+stu.rno+"<br>");
+
+        var emp=new Object();
+        emp.id=61;
+        emp.name="Ram";
+        emp.sal=50000;
+        document.write(emp.id+" "+emp.name+" "+emp.sal+"<br>");
+
+
+        function student(rno,name,address,branch){
+            this.rno=rno;
+            this.name=name;
+            this.address=address;
+            this.branch=branch;
+        }
+            var stu1=new student(10,"sopna","Bheem","cse");
+            document.write(stu1.rno+" "+stu1.name+" "+stu1.address+" "+stu1.branch);
+        
+    </script>
+    <center><h2>Date and Time in JavaScript</h2></center>
+    <script>
+        var date=new Date();
+        document.write(date+"<br>");
+
+        var day=date.getDate();
+        var month=date.getMonth()+1;
+        var year=date.getFullYear();
+        document.write(day+"-"+month+"-"+year+"<br>");
+    </script>
+
+    <center><h2>String Objects in JavaScript</h2></center>
+    <script>
+        var x="Hello";
+        var y="welcome";
+        document.write(x+" "+y+"<br>");
+
+        var s=new String("Hai");
+        document.write(s.charAt(0)+"<br>");
+        document.write(s.indexOf("i")+"<br>");
+        document.write(s.indexOf("Hai")+"<br>");
+        document.write(s.toUpperCase()+"<br>");
+        document.write(s.toLowerCase()+"<br>");
+        document.write(s.slice(1,4)+"<br>");
+    </script>
+
+    <center><h2>Math Objects in JavaScript</h2></center>
+    <script>
+        var x=16;
+        document.write(Math.sqrt(x)+"<br");
+        //document.write(Math.random());
+       // document.write(Math.pow(5,3)+"<br>");
+    </script>
+
+     <!--Finding the browser width and height-->
+     <script>
+        var w=window.innerWidth;
+        var h=window.innerHeight;
+        document.write("<br>width"+w+" "+"height"+h);
+    </script>
+
+    <center><h2>Browser Object Model in JavaScript</h2></center>
+   <!--BOM:6 types
+        1)Window object(alert,confirm,prompt,open,close,size,interval,timeout)
+        2)History Object(back,forward)-->
+   <script>
+       /* //browser object model 6 types
+        //1.window object
+        //2.history object
+        window.alert("Hello");
+       // alert("Hai");  window.alert or alert both are same
+        window.confirm("welcome");
+        //confirm("welcome");
+        window.prompt("Who are you?");
+        //var x=prompt("Who are you?");
+        //document.write(x);*/
+        
+    </script>
+    <h3>History model(back)</h3>
+        <input type="button" value="Google" onclick="myFun()">
+        <script>
+            function myFun(){
+                open("http://www.google.com");
+            }
+        </script>
+        <a href="second_page.html"><br>Go to second page</a>
+        <h3>History model(forward)</h3>
+        <script>
+            function goForward(){
+                history.forward();
+            }
+        </script>
+       <input type="button" value="forward" onclick="goForward()">
+
+       <!--BOM
+            3)Navigator Object
+            4)Screen Object-->
+        <h3>Navigator</h3>
+        <script>
+            document.write(navigator.appName+"<br>");
+            document.write(navigator.appVersion+"<br>");
+            document.write(navigator.language+"<br>");
+            document.write(navigator.platform+"<br>");
+       
+            document.write(screen.width+"<br>");
+            document.write(screen.height+"<br>");
+            document.write(screen.colorDeapth+"<br>");
+            document.write(screen.pixelDeapth);
+        </script>
+        <!--BOM
+            5)Location (href,hostname,pathname,assign())
+            6)cookies-->
+        <h2>To print the url of current webpage</h2>
+        <script>
+            document.write(location.href);
+        </script>
+</body>
+</html>

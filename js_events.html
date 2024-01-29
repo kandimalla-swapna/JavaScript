@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center" bgcolor="orange" onload="fun8()">
+    <h2><u>Events in JavaScript</u></h2>
+    <h3>onclick</h3>
+    <p id="p1"></p>
+    <input type="button" value="click me" onclick="fun()">
+    <script>
+        function fun(){
+            document.getElementById("p1").innerHTML="Hello welcome i am sopna kandimalla";
+        }
+    </script>
+    <h3>ondblclick</h3>
+    <input type="button" value="click here" ondblclick="fun2()">
+    <p id="p2"></p>
+    <script>
+        function fun2(){
+            document.getElementById("p2").innerHTML="You double clicked one me";
+        }
+    </script>
+    <h3>onmouseover</h3>
+    <input type="button" value="please click" onmouseover="fun3()">
+    <p id="p3"></p>
+    <script>
+        function fun3(){
+            document.getElementById("p3").innerHTML="The mouse is on hover";
+        }
+    </script>
+    <h3>onmouseout</h3>
+    <p id="p4"></p>
+    <input type="button" value="click click" onmouseout="fun4()">
+    <script>
+        function fun4(){
+            document.getElementById("p4").innerHTML="The mouse is moved out from the button";
+        }
+    </script>
+    <h3>onfocus</h3>
+    <input type="text" onfocus="fun5()">
+    <p id="p5"></p>
+    <script>
+        function fun5(){
+            document.getElementById("p5").innerHTML="hello welcome to my world";
+        }
+    </script>
+    <h3>onblur</h3>
+    <input type="text" onblur="fun6()">
+    <p id="p6"></p>
+    <script>
+        function fun6(){
+            document.getElementById("p6").innerHTML="hello welcome to my world";
+        }
+    </script>
+    <h3>onchange</h3>
+    <input type="text" onchange="fun7()">
+    <p id="p7"></p>
+    <script>
+        function fun7(){
+            document.getElementById("p7").innerHTML="hello welcome to my world!";
+        }
+    </script>
+    <h3>onload</h3>
+    <p>if we want to display anything immediately after the opening of webpage the we use onload and it is used in body tag</p>
+    <p id="p8"></p>
+    <script>
+        function fun8(){
+            document.getElementById("p8").innerHTML="Good Morning";
+        }
+    </script>
+    <h3>onsubmit</h3>
+    <p id="p9"></p>
+    <form onsubmit="fun9()">
+    <input type="text">
+    <input type="button" value="submit">
+    </form>
+   
+    <script>
+        function fun9(){
+            document.getElementById("p9").innerHTML="hello welcome to on submit";
+        }
+    </script>
+</body>
+</html>

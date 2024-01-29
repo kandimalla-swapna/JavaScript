@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="pink">
+    <!--DOM(document object model):
+            with the help of DOM we can add dynamic content to
+            our webpage.Update the content ,structure&style.-->
+    <!--3 mrthods
+        1)write()
+        2)getElementById()
+        3)getElementsByName()-->
+    
+    <h3>write</h3>
+    <script>
+        document.write("This is written using the write method");
+    </script>
+    
+    
+    <h3>getElementById</h3>
+    <form>
+        Enter num:<input type="text" id="num" ><br><br>
+        <input type="button" value="cube value" onclick="getCube()">
+    </form>
+    <script>
+        function getCube(){
+            var num=document.getElementById("num").value;
+           alert(num*num*num);
+            // document.write(num*num*num);
+        }
+    </script>
+
+    <h3>getElementByTagName</h3>
+    <form name="form">
+        Enter Name:<input type="text" name="name"><br><br>
+        <input type="button" value="Print" onclick="printValue()">
+    </form>
+    <script>
+        function printValue(){
+            var name1=document.form.name.value;
+            alert("Welcome "+name1);
+        }
+    </script>
+</body>
+</html>
